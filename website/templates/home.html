@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home | Notes App
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+
+        <!-- Hero Section -->
+        <div class="card p-5 text-center mb-4">
+            <h1 class="display-4 fw-bold">
+                📝 Welcome to Notes App
+            </h1>
+
+            <p class="lead text-muted mt-3">
+                Organize your thoughts, ideas, tasks, and important information
+                in one secure place.
+            </p>
+
+            <div class="mt-4">
+                <a href="/add" class="btn btn-primary btn-lg me-2">
+                    Create New Note
+                </a>
+
+                <a href="/notes" class="btn btn-outline-secondary btn-lg">
+                    View Notes
+                </a>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 p-4 text-center">
+                    <h2>✍️</h2>
+                    <h5 class="fw-bold mt-3">
+                        Create Notes
+                    </h5>
+                    <p class="text-muted">
+                        Quickly save your thoughts, ideas, and reminders.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 p-4 text-center">
+                    <h2>📂</h2>
+                    <h5 class="fw-bold mt-3">
+                        Organize
+                    </h5>
+                    <p class="text-muted">
+                        Keep all your notes structured and accessible.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 p-4 text-center">
+                    <h2>⚡</h2>
+                    <h5 class="fw-bold mt-3">
+                        Fast Access
+                    </h5>
+                    <p class="text-muted">
+                        View and manage your notes anytime with ease.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Stats Section -->
+        <div class="card mt-5 p-4">
+            <div class="row text-center">
+
+                <div class="col-md-4">
+                    <h2 class="fw-bold text-primary">
+                        {{ total_notes if total_notes else 0 }}
+                    </h2>
+                    <p>Total Notes</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h2 class="fw-bold text-success">
+                        ✓
+                    </h2>
+                    <p>Easy to Use</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h2 class="fw-bold text-warning">
+                        🔒
+                    </h2>
+                    <p>Secure Storage</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Quote Section -->
+        <div class="card mt-4 p-4 text-center">
+            <blockquote class="blockquote mb-0">
+                <p>
+                    "The faintest ink is more powerful than the strongest memory."
+                </p>
+                <footer class="blockquote-footer mt-2">
+                    Chinese Proverb
+                </footer>
+            </blockquote>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
